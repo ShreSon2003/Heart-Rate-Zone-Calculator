@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  #result {
+    margin-top: 20px;
+    display: none;
+  }
+  
+  #result h2 {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  #result p {
+    font-size: 16px;
+    color: #444;
+  }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heart Rate Zone Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Heart Rate Zone Calculator</h1>
+    <p>Enter your age to calculate your heart rate zones:</p>
+    <input type="number" id="ageInput" placeholder="Enter your age">
+    <button onclick="calculateZones()">Calculate</button>
+    <div id="result">
+      <h2>Results:</h2>
+      <p>Fat Burning Zone: <span id="fatBurningZone"></span> bpm</p>
+      <p>Cardio Zone: <span id="cardioZone"></span> bpm</p>
+      <p>Peak Zone: <span id="peakZone"></span> bpm</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
